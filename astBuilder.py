@@ -207,7 +207,7 @@ class astBuilder(twoeightyListener):
         args = [self.valueExp(x) for x in ctx.value()]
         if func == 'rand':
             func = 'random'
-        return {"function": func,
+        return {"functionName": func,
                 "arguments": args}
 
     # Exit a parse tree produced by twoeightyParser#MathFunc.
