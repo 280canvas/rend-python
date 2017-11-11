@@ -7,5 +7,5 @@ setup(
     author='280canvas',
     author_email='hello@280canvas.com',
     packages=['rend'],
-    install_requires=['antlr4', ],
+    install_requires=['antlr4-python3-runtime', ],
 )
