@@ -99,7 +99,7 @@ class astBuilder(twoeightyListener):
 
     # Enter a parse tree produced by twoeightyParser#line.
     def enterLine(self, ctx:twoeightyParser.LineContext):
-        self.root["statements"].append({"instruction": "rectangle",
+        self.root["statements"].append({"instruction": "line",
                                         "x1": self.valueExp(ctx.x1),
                                         "y1": self.valueExp(ctx.y1),
                                         "x2": self.valueExp(ctx.x2),
@@ -112,7 +112,7 @@ class astBuilder(twoeightyListener):
 
     # Enter a parse tree produced by twoeightyParser#arc.
     def enterArc(self, ctx:twoeightyParser.ArcContext):
-        self.root["statements"].append({"instruction": "rectangle",
+        self.root["statements"].append({"instruction": "arc",
                                         "x1": self.valueExp(ctx.x1),
                                         "y1": self.valueExp(ctx.y1),
                                         "x2": self.valueExp(ctx.x2),
@@ -281,4 +281,4 @@ def parse(tweet):
     return encoder.encode(builder.root)
 
 
-print(parse("x=0;3s:rx,2,3,4;c500,500,100*sin(x);"))
+print(parse("x=0;3s:rx,2,3,4;c500,500,100*sin(x);x++;"))
