@@ -1,0 +1,38 @@
+grammar twoeighty;
+
+program         : variableDec* loop (statement ';')*;
+variableDec     : ID '=' value ';';
+loop            : INT unit=('ms'|'s') ':';
+statement       : clear
+                | shape
+                | increment
+                | decrement
+                | variableAssign;
+
+clear           : 'clr' | 'clear';
+shape           : rectangle | circle | line | arc ;
+rectangle       : ('rect' | 'r') x=value ',' y=value ',' w=value ',' h=value;
+circle          : ('circle' | 'c') x=value ',' y=value ',' r=value;
+line            : ('line' | 'l') x1=value ',' y1=value ',' x2=value ',' y2=value;
+arc             : ('arc' | 'a') x1=value ',' y1=value ',' x2=value ',' y2=value ',' cx=value ',' cy=value;
+                
+increment       : ID '++';
+decrement       : ID '--';
+
+variableAssign  : ID '=' value;
+
+value           : l=value op r=value #Binop
+                | '%'                #Thousand
+                | ID                 #Variable
+                | INT                #Integer;
+
+op              : '/'
+                | '//'
+                | '*'
+                | '+'
+                | '-'
+                | '%'
+                ;
+
+ID              : [a-z];
+INT             : [0-9]+;
