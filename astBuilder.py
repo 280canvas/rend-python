@@ -87,7 +87,10 @@ class astBuilder(twoeightyListener):
 
     # Enter a parse tree produced by twoeightyParser#circle.
     def enterCircle(self, ctx:twoeightyParser.CircleContext):
-        pass
+        self.root["statements"].append({"instruction": "circle",
+                                        "x": self.valueExp(ctx.x),
+                                        "y": self.valueExp(ctx.y),
+                                        "r": self.valueExp(ctx.r)})
 
     # Exit a parse tree produced by twoeightyParser#circle.
     def exitCircle(self, ctx:twoeightyParser.CircleContext):
@@ -96,7 +99,11 @@ class astBuilder(twoeightyListener):
 
     # Enter a parse tree produced by twoeightyParser#line.
     def enterLine(self, ctx:twoeightyParser.LineContext):
-        pass
+        self.root["statements"].append({"instruction": "rectangle",
+                                        "x1": self.valueExp(ctx.x1),
+                                        "y1": self.valueExp(ctx.y1),
+                                        "x2": self.valueExp(ctx.x2),
+                                        "y2": self.valueExp(ctx.y2)})
 
     # Exit a parse tree produced by twoeightyParser#line.
     def exitLine(self, ctx:twoeightyParser.LineContext):
@@ -105,7 +112,13 @@ class astBuilder(twoeightyListener):
 
     # Enter a parse tree produced by twoeightyParser#arc.
     def enterArc(self, ctx:twoeightyParser.ArcContext):
-        pass
+        self.root["statements"].append({"instruction": "rectangle",
+                                        "x1": self.valueExp(ctx.x1),
+                                        "y1": self.valueExp(ctx.y1),
+                                        "x2": self.valueExp(ctx.x2),
+                                        "y2": self.valueExp(ctx.y2),
+                                        "cx": self.valueExp(ctx.cx),
+                                        "cy": self.valueExp(ctx.cy)})
 
     # Exit a parse tree produced by twoeightyParser#arc.
     def exitArc(self, ctx:twoeightyParser.ArcContext):
@@ -188,6 +201,19 @@ class astBuilder(twoeightyListener):
         pass
 
 
+    # Enter a parse tree produced by twoeightyParser#MathFunc.
+    def enterMathFunc(self, ctx:twoeightyParser.MathFuncContext):
+        func = ctx.funccall().getText()
+        args = [self.valueExp(x) for x in ctx.value()]
+        if func == 'rand':
+            func = 'random'
+        return {"function": func,
+                "arguments": args}
+
+    # Exit a parse tree produced by twoeightyParser#MathFunc.
+    def exitMathFunc(self, ctx:twoeightyParser.MathFuncContext):
+        pass
+
     # Enter a parse tree produced by twoeightyParser#Binop.
     def enterBinop(self, ctx:twoeightyParser.BinopContext):
         return {"l": self.valueExp(ctx.l),
@@ -207,6 +233,15 @@ class astBuilder(twoeightyListener):
     # Exit a parse tree produced by twoeightyParser#op.
     def exitOp(self, ctx:twoeightyParser.OpContext):
         pass
+
+    # Enter a parse tree produced by twoeightyParser#funccall.
+    def enterFunccall(self, ctx:twoeightyParser.FunccallContext):
+        pass
+
+
+    # Exit a parse tree produced by twoeightyParser#funccall.
+    def exitFunccall(self, ctx:twoeightyParser.FunccallContext):
+        pass
     
     def valueExp(self, ctx:twoeightyParser.ValueContext):
         t = type(ctx)
@@ -224,8 +259,11 @@ class astBuilder(twoeightyListener):
         elif t is twoeightyParser.BinopContext:
             returnType = "binop"
             result = self.enterBinop(ctx)
+        elif t is twoeightyParser.MathFuncContext:
+            returnType = "funccall"
+            result = self.enterMathFunc(ctx)
         else:
-            raise Exception("literally what the fuck [screams internally]")
+            raise Exception(t, returnType, ctx)
         return {"returns": returnType,
                 returnType: result}
 
@@ -243,4 +281,4 @@ def parse(tweet):
     return encoder.encode(builder.root)
 
 
-print(parse("x=2;3s:x=x-1;rx,2,3,4;"))
+print(parse("x=0;3s:rx,2,3,4;c500,500,100*sin(x);"))

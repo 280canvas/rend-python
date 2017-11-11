@@ -152,6 +152,15 @@ class twoeightyListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by twoeightyParser#MathFunc.
+    def enterMathFunc(self, ctx:twoeightyParser.MathFuncContext):
+        pass
+
+    # Exit a parse tree produced by twoeightyParser#MathFunc.
+    def exitMathFunc(self, ctx:twoeightyParser.MathFuncContext):
+        pass
+
+
     # Enter a parse tree produced by twoeightyParser#Binop.
     def enterBinop(self, ctx:twoeightyParser.BinopContext):
         pass
@@ -167,6 +176,15 @@ class twoeightyListener(ParseTreeListener):
 
     # Exit a parse tree produced by twoeightyParser#op.
     def exitOp(self, ctx:twoeightyParser.OpContext):
+        pass
+
+
+    # Enter a parse tree produced by twoeightyParser#funccall.
+    def enterFunccall(self, ctx:twoeightyParser.FunccallContext):
+        pass
+
+    # Exit a parse tree produced by twoeightyParser#funccall.
+    def exitFunccall(self, ctx:twoeightyParser.FunccallContext):
         pass
 
 

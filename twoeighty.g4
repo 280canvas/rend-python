@@ -21,10 +21,11 @@ decrement       : ID '--';
 
 variableAssign  : ID '=' value;
 
-value           : l=value op r=value #Binop
-                | '%'                #Thousand
-                | ID                 #Variable
-                | INT                #Integer;
+value           : l=value op r=value    #Binop
+                | funccall '(' value (',' value)* ')' #MathFunc
+                | '%'                   #Thousand
+                | ID                    #Variable
+                | INT                   #Integer;
 
 op              : '/'
                 | '//'
@@ -34,5 +35,13 @@ op              : '/'
                 | '%'
                 ;
 
+funccall        : 'sin'
+                | 'cos'
+                | 'tan'
+                | 'pow'
+                | 'rand'
+                ;
+
+
 ID              : [a-z];
-INT             : [0-9]+;
+INT             : ('-')? [0-9]+;
