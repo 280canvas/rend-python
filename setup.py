@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='rend',
-    version='1.2',
+    version='1.3',
     description='A rend parser lib',
     author='280canvas',
     author_email='hello@280canvas.com',
