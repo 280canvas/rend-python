@@ -292,4 +292,4 @@ def parse(tweet):
     return encoder.encode(builder.root)
 
 
-print(parse("x=0;3s:rx,2,3,4;c500,500,100*sin(x);x++;"))
+print(parse("x=0;500 ms:clr;c 500,500,100*sin(x);x++;"))
