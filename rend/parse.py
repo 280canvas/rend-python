@@ -3,9 +3,9 @@ import io
 
 from antlr4 import *
 
-from ANTLR.twoeightyLexer import twoeightyLexer
-from ANTLR.twoeightyListener import twoeightyListener
-from ANTLR.twoeightyParser import twoeightyParser
+from rend.ANTLR.twoeightyLexer import twoeightyLexer
+from rend.ANTLR.twoeightyListener import twoeightyListener
+from rend.ANTLR.twoeightyParser import twoeightyParser
 
 
 class astBuilder(twoeightyListener):
