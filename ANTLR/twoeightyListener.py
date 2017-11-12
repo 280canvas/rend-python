@@ -53,6 +53,15 @@ class twoeightyListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by twoeightyParser#colour.
+    def enterColour(self, ctx:twoeightyParser.ColourContext):
+        pass
+
+    # Exit a parse tree produced by twoeightyParser#colour.
+    def exitColour(self, ctx:twoeightyParser.ColourContext):
+        pass
+
+
     # Enter a parse tree produced by twoeightyParser#shape.
     def enterShape(self, ctx:twoeightyParser.ShapeContext):
         pass

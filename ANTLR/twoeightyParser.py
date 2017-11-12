@@ -5,59 +5,63 @@ from io import StringIO
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3#")
-        buf.write("\u0099\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3&")
+        buf.write("\u009f\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\7\2$\n\2\f\2\16")
-        buf.write("\2\'\13\2\3\2\3\2\3\2\3\2\7\2-\n\2\f\2\16\2\60\13\2\3")
-        buf.write("\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5")
-        buf.write("\5\5@\n\5\3\6\3\6\3\7\3\7\3\7\3\7\5\7H\n\7\3\b\3\b\3\b")
-        buf.write("\3\b\3\b\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3")
-        buf.write("\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13")
-        buf.write("\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\f\3\f")
-        buf.write("\3\f\3\r\3\r\3\r\3\16\3\16\3\16\3\16\3\17\3\17\3\17\3")
-        buf.write("\17\3\17\3\17\7\17\u0080\n\17\f\17\16\17\u0083\13\17\3")
-        buf.write("\17\3\17\3\17\3\17\3\17\5\17\u008a\n\17\3\17\3\17\3\17")
-        buf.write("\3\17\7\17\u0090\n\17\f\17\16\17\u0093\13\17\3\20\3\20")
-        buf.write("\3\21\3\21\3\21\2\3\34\22\2\4\6\b\n\f\16\20\22\24\26\30")
-        buf.write("\32\34\36 \2\n\3\2\5\6\3\2\b\t\3\2\n\13\3\2\r\16\3\2\17")
-        buf.write("\20\3\2\21\22\3\2\27\34\3\2\35!\u0096\2%\3\2\2\2\4\61")
-        buf.write("\3\2\2\2\6\66\3\2\2\2\b?\3\2\2\2\nA\3\2\2\2\fG\3\2\2\2")
-        buf.write("\16I\3\2\2\2\20R\3\2\2\2\22Y\3\2\2\2\24b\3\2\2\2\26o\3")
-        buf.write("\2\2\2\30r\3\2\2\2\32u\3\2\2\2\34\u0089\3\2\2\2\36\u0094")
-        buf.write("\3\2\2\2 \u0096\3\2\2\2\"$\5\4\3\2#\"\3\2\2\2$\'\3\2\2")
-        buf.write("\2%#\3\2\2\2%&\3\2\2\2&(\3\2\2\2\'%\3\2\2\2(.\5\6\4\2")
-        buf.write(")*\5\b\5\2*+\7\3\2\2+-\3\2\2\2,)\3\2\2\2-\60\3\2\2\2.")
-        buf.write(",\3\2\2\2./\3\2\2\2/\3\3\2\2\2\60.\3\2\2\2\61\62\7\"\2")
-        buf.write("\2\62\63\7\4\2\2\63\64\5\34\17\2\64\65\7\3\2\2\65\5\3")
-        buf.write("\2\2\2\66\67\7#\2\2\678\t\2\2\289\7\7\2\29\7\3\2\2\2:")
-        buf.write("@\5\n\6\2;@\5\f\7\2<@\5\26\f\2=@\5\30\r\2>@\5\32\16\2")
-        buf.write("?:\3\2\2\2?;\3\2\2\2?<\3\2\2\2?=\3\2\2\2?>\3\2\2\2@\t")
-        buf.write("\3\2\2\2AB\t\3\2\2B\13\3\2\2\2CH\5\16\b\2DH\5\20\t\2E")
-        buf.write("H\5\22\n\2FH\5\24\13\2GC\3\2\2\2GD\3\2\2\2GE\3\2\2\2G")
-        buf.write("F\3\2\2\2H\r\3\2\2\2IJ\t\4\2\2JK\5\34\17\2KL\7\f\2\2L")
-        buf.write("M\5\34\17\2MN\7\f\2\2NO\5\34\17\2OP\7\f\2\2PQ\5\34\17")
-        buf.write("\2Q\17\3\2\2\2RS\t\5\2\2ST\5\34\17\2TU\7\f\2\2UV\5\34")
-        buf.write("\17\2VW\7\f\2\2WX\5\34\17\2X\21\3\2\2\2YZ\t\6\2\2Z[\5")
-        buf.write("\34\17\2[\\\7\f\2\2\\]\5\34\17\2]^\7\f\2\2^_\5\34\17\2")
-        buf.write("_`\7\f\2\2`a\5\34\17\2a\23\3\2\2\2bc\t\7\2\2cd\5\34\17")
-        buf.write("\2de\7\f\2\2ef\5\34\17\2fg\7\f\2\2gh\5\34\17\2hi\7\f\2")
-        buf.write("\2ij\5\34\17\2jk\7\f\2\2kl\5\34\17\2lm\7\f\2\2mn\5\34")
-        buf.write("\17\2n\25\3\2\2\2op\7\"\2\2pq\7\23\2\2q\27\3\2\2\2rs\7")
-        buf.write("\"\2\2st\7\24\2\2t\31\3\2\2\2uv\7\"\2\2vw\7\4\2\2wx\5")
-        buf.write("\34\17\2x\33\3\2\2\2yz\b\17\1\2z{\5 \21\2{|\7\25\2\2|")
-        buf.write("\u0081\5\34\17\2}~\7\f\2\2~\u0080\5\34\17\2\177}\3\2\2")
-        buf.write("\2\u0080\u0083\3\2\2\2\u0081\177\3\2\2\2\u0081\u0082\3")
-        buf.write("\2\2\2\u0082\u0084\3\2\2\2\u0083\u0081\3\2\2\2\u0084\u0085")
-        buf.write("\7\26\2\2\u0085\u008a\3\2\2\2\u0086\u008a\7\27\2\2\u0087")
-        buf.write("\u008a\7\"\2\2\u0088\u008a\7#\2\2\u0089y\3\2\2\2\u0089")
-        buf.write("\u0086\3\2\2\2\u0089\u0087\3\2\2\2\u0089\u0088\3\2\2\2")
-        buf.write("\u008a\u0091\3\2\2\2\u008b\u008c\f\7\2\2\u008c\u008d\5")
-        buf.write("\36\20\2\u008d\u008e\5\34\17\b\u008e\u0090\3\2\2\2\u008f")
-        buf.write("\u008b\3\2\2\2\u0090\u0093\3\2\2\2\u0091\u008f\3\2\2\2")
-        buf.write("\u0091\u0092\3\2\2\2\u0092\35\3\2\2\2\u0093\u0091\3\2")
-        buf.write("\2\2\u0094\u0095\t\b\2\2\u0095\37\3\2\2\2\u0096\u0097")
-        buf.write("\t\t\2\2\u0097!\3\2\2\2\t%.?G\u0081\u0089\u0091")
+        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\3\2\7\2")
+        buf.write("&\n\2\f\2\16\2)\13\2\3\2\3\2\3\2\3\2\7\2/\n\2\f\2\16\2")
+        buf.write("\62\13\2\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\5\3\5\3")
+        buf.write("\5\3\5\3\5\3\5\5\5C\n\5\3\6\3\6\3\7\3\7\3\7\3\b\3\b\3")
+        buf.write("\b\3\b\5\bN\n\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3")
+        buf.write("\n\3\n\3\n\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3")
+        buf.write("\13\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f")
+        buf.write("\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3\16\3\16\3\16\3\17\3\17")
+        buf.write("\3\17\3\17\3\20\3\20\3\20\3\20\3\20\3\20\7\20\u0086\n")
+        buf.write("\20\f\20\16\20\u0089\13\20\3\20\3\20\3\20\3\20\3\20\5")
+        buf.write("\20\u0090\n\20\3\20\3\20\3\20\3\20\7\20\u0096\n\20\f\20")
+        buf.write("\16\20\u0099\13\20\3\21\3\21\3\22\3\22\3\22\2\3\36\23")
+        buf.write("\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"\2\13\3\2\5")
+        buf.write("\6\3\2\b\t\3\2\n\13\3\2\f\r\3\2\17\20\3\2\21\22\3\2\23")
+        buf.write("\24\3\2\31\36\3\2\37#\u009c\2\'\3\2\2\2\4\63\3\2\2\2\6")
+        buf.write("8\3\2\2\2\bB\3\2\2\2\nD\3\2\2\2\fF\3\2\2\2\16M\3\2\2\2")
+        buf.write("\20O\3\2\2\2\22X\3\2\2\2\24_\3\2\2\2\26h\3\2\2\2\30u\3")
+        buf.write("\2\2\2\32x\3\2\2\2\34{\3\2\2\2\36\u008f\3\2\2\2 \u009a")
+        buf.write("\3\2\2\2\"\u009c\3\2\2\2$&\5\4\3\2%$\3\2\2\2&)\3\2\2\2")
+        buf.write("\'%\3\2\2\2\'(\3\2\2\2(*\3\2\2\2)\'\3\2\2\2*\60\5\6\4")
+        buf.write("\2+,\5\b\5\2,-\7\3\2\2-/\3\2\2\2.+\3\2\2\2/\62\3\2\2\2")
+        buf.write("\60.\3\2\2\2\60\61\3\2\2\2\61\3\3\2\2\2\62\60\3\2\2\2")
+        buf.write("\63\64\7$\2\2\64\65\7\4\2\2\65\66\5\36\20\2\66\67\7\3")
+        buf.write("\2\2\67\5\3\2\2\289\7%\2\29:\t\2\2\2:;\7\7\2\2;\7\3\2")
+        buf.write("\2\2<C\5\n\6\2=C\5\f\7\2>C\5\16\b\2?C\5\30\r\2@C\5\32")
+        buf.write("\16\2AC\5\34\17\2B<\3\2\2\2B=\3\2\2\2B>\3\2\2\2B?\3\2")
+        buf.write("\2\2B@\3\2\2\2BA\3\2\2\2C\t\3\2\2\2DE\t\3\2\2E\13\3\2")
+        buf.write("\2\2FG\t\4\2\2GH\7&\2\2H\r\3\2\2\2IN\5\20\t\2JN\5\22\n")
+        buf.write("\2KN\5\24\13\2LN\5\26\f\2MI\3\2\2\2MJ\3\2\2\2MK\3\2\2")
+        buf.write("\2ML\3\2\2\2N\17\3\2\2\2OP\t\5\2\2PQ\5\36\20\2QR\7\16")
+        buf.write("\2\2RS\5\36\20\2ST\7\16\2\2TU\5\36\20\2UV\7\16\2\2VW\5")
+        buf.write("\36\20\2W\21\3\2\2\2XY\t\6\2\2YZ\5\36\20\2Z[\7\16\2\2")
+        buf.write("[\\\5\36\20\2\\]\7\16\2\2]^\5\36\20\2^\23\3\2\2\2_`\t")
+        buf.write("\7\2\2`a\5\36\20\2ab\7\16\2\2bc\5\36\20\2cd\7\16\2\2d")
+        buf.write("e\5\36\20\2ef\7\16\2\2fg\5\36\20\2g\25\3\2\2\2hi\t\b\2")
+        buf.write("\2ij\5\36\20\2jk\7\16\2\2kl\5\36\20\2lm\7\16\2\2mn\5\36")
+        buf.write("\20\2no\7\16\2\2op\5\36\20\2pq\7\16\2\2qr\5\36\20\2rs")
+        buf.write("\7\16\2\2st\5\36\20\2t\27\3\2\2\2uv\7$\2\2vw\7\25\2\2")
+        buf.write("w\31\3\2\2\2xy\7$\2\2yz\7\26\2\2z\33\3\2\2\2{|\7$\2\2")
+        buf.write("|}\7\4\2\2}~\5\36\20\2~\35\3\2\2\2\177\u0080\b\20\1\2")
+        buf.write("\u0080\u0081\5\"\22\2\u0081\u0082\7\27\2\2\u0082\u0087")
+        buf.write("\5\36\20\2\u0083\u0084\7\16\2\2\u0084\u0086\5\36\20\2")
+        buf.write("\u0085\u0083\3\2\2\2\u0086\u0089\3\2\2\2\u0087\u0085\3")
+        buf.write("\2\2\2\u0087\u0088\3\2\2\2\u0088\u008a\3\2\2\2\u0089\u0087")
+        buf.write("\3\2\2\2\u008a\u008b\7\30\2\2\u008b\u0090\3\2\2\2\u008c")
+        buf.write("\u0090\7\31\2\2\u008d\u0090\7$\2\2\u008e\u0090\7%\2\2")
+        buf.write("\u008f\177\3\2\2\2\u008f\u008c\3\2\2\2\u008f\u008d\3\2")
+        buf.write("\2\2\u008f\u008e\3\2\2\2\u0090\u0097\3\2\2\2\u0091\u0092")
+        buf.write("\f\7\2\2\u0092\u0093\5 \21\2\u0093\u0094\5\36\20\b\u0094")
+        buf.write("\u0096\3\2\2\2\u0095\u0091\3\2\2\2\u0096\u0099\3\2\2\2")
+        buf.write("\u0097\u0095\3\2\2\2\u0097\u0098\3\2\2\2\u0098\37\3\2")
+        buf.write("\2\2\u0099\u0097\3\2\2\2\u009a\u009b\t\t\2\2\u009b!\3")
+        buf.write("\2\2\2\u009c\u009d\t\n\2\2\u009d#\3\2\2\2\t\'\60BM\u0087")
+        buf.write("\u008f\u0097")
         return buf.getvalue()
 
 
@@ -72,10 +76,11 @@ class twoeightyParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "';'", "'='", "'ms'", "'s'", "':'", "'clr'", 
-                     "'clear'", "'rect'", "'r'", "','", "'circle'", "'c'", 
-                     "'line'", "'l'", "'arc'", "'a'", "'++'", "'--'", "'('", 
-                     "')'", "'%'", "'/'", "'//'", "'*'", "'+'", "'-'", "'sin'", 
-                     "'cos'", "'tan'", "'pow'", "'rand'" ]
+                     "'clear'", "'colour'", "'#'", "'rect'", "'r'", "','", 
+                     "'circle'", "'c'", "'line'", "'l'", "'arc'", "'a'", 
+                     "'++'", "'--'", "'('", "')'", "'%'", "'/'", "'//'", 
+                     "'*'", "'+'", "'-'", "'sin'", "'cos'", "'tan'", "'pow'", 
+                     "'rand'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
@@ -85,28 +90,30 @@ class twoeightyParser ( Parser ):
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "ID", "INT" ]
+                      "<INVALID>", "<INVALID>", "ID", "INT", "COLOUR" ]
 
     RULE_program = 0
     RULE_variableDec = 1
     RULE_loop = 2
     RULE_statement = 3
     RULE_clear = 4
-    RULE_shape = 5
-    RULE_rectangle = 6
-    RULE_circle = 7
-    RULE_line = 8
-    RULE_arc = 9
-    RULE_increment = 10
-    RULE_decrement = 11
-    RULE_variableAssign = 12
-    RULE_value = 13
-    RULE_op = 14
-    RULE_funccall = 15
+    RULE_colour = 5
+    RULE_shape = 6
+    RULE_rectangle = 7
+    RULE_circle = 8
+    RULE_line = 9
+    RULE_arc = 10
+    RULE_increment = 11
+    RULE_decrement = 12
+    RULE_variableAssign = 13
+    RULE_value = 14
+    RULE_op = 15
+    RULE_funccall = 16
 
     ruleNames =  [ "program", "variableDec", "loop", "statement", "clear", 
-                   "shape", "rectangle", "circle", "line", "arc", "increment", 
-                   "decrement", "variableAssign", "value", "op", "funccall" ]
+                   "colour", "shape", "rectangle", "circle", "line", "arc", 
+                   "increment", "decrement", "variableAssign", "value", 
+                   "op", "funccall" ]
 
     EOF = Token.EOF
     T__0=1
@@ -140,8 +147,11 @@ class twoeightyParser ( Parser ):
     T__28=29
     T__29=30
     T__30=31
-    ID=32
-    INT=33
+    T__31=32
+    T__32=33
+    ID=34
+    INT=35
+    COLOUR=36
 
     def __init__(self, input:TokenStream):
         super().__init__(input)
@@ -196,27 +206,27 @@ class twoeightyParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 35
+            self.state = 37
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==twoeightyParser.ID:
-                self.state = 32
+                self.state = 34
                 self.variableDec()
-                self.state = 37
+                self.state = 39
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 38
+            self.state = 40
             self.loop()
-            self.state = 44
+            self.state = 46
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__5) | (1 << twoeightyParser.T__6) | (1 << twoeightyParser.T__7) | (1 << twoeightyParser.T__8) | (1 << twoeightyParser.T__10) | (1 << twoeightyParser.T__11) | (1 << twoeightyParser.T__12) | (1 << twoeightyParser.T__13) | (1 << twoeightyParser.T__14) | (1 << twoeightyParser.T__15) | (1 << twoeightyParser.ID))) != 0):
-                self.state = 39
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__5) | (1 << twoeightyParser.T__6) | (1 << twoeightyParser.T__7) | (1 << twoeightyParser.T__8) | (1 << twoeightyParser.T__9) | (1 << twoeightyParser.T__10) | (1 << twoeightyParser.T__12) | (1 << twoeightyParser.T__13) | (1 << twoeightyParser.T__14) | (1 << twoeightyParser.T__15) | (1 << twoeightyParser.T__16) | (1 << twoeightyParser.T__17) | (1 << twoeightyParser.ID))) != 0):
+                self.state = 41
                 self.statement()
-                self.state = 40
+                self.state = 42
                 self.match(twoeightyParser.T__0)
-                self.state = 46
+                self.state = 48
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -261,13 +271,13 @@ class twoeightyParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_variableDec)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 47
-            self.match(twoeightyParser.ID)
-            self.state = 48
-            self.match(twoeightyParser.T__1)
             self.state = 49
-            self.value(0)
+            self.match(twoeightyParser.ID)
             self.state = 50
+            self.match(twoeightyParser.T__1)
+            self.state = 51
+            self.value(0)
+            self.state = 52
             self.match(twoeightyParser.T__0)
         except RecognitionException as re:
             localctx.exception = re
@@ -308,16 +318,16 @@ class twoeightyParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 52
+            self.state = 54
             self.match(twoeightyParser.INT)
-            self.state = 53
+            self.state = 55
             localctx.unit = self._input.LT(1)
             _la = self._input.LA(1)
             if not(_la==twoeightyParser.T__2 or _la==twoeightyParser.T__3):
                 localctx.unit = self._errHandler.recoverInline(self)
             else:
                 self.consume()
-            self.state = 54
+            self.state = 56
             self.match(twoeightyParser.T__4)
         except RecognitionException as re:
             localctx.exception = re
@@ -335,6 +345,10 @@ class twoeightyParser ( Parser ):
 
         def clear(self):
             return self.getTypedRuleContext(twoeightyParser.ClearContext,0)
+
+
+        def colour(self):
+            return self.getTypedRuleContext(twoeightyParser.ColourContext,0)
 
 
         def shape(self):
@@ -372,36 +386,42 @@ class twoeightyParser ( Parser ):
         localctx = twoeightyParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_statement)
         try:
-            self.state = 61
+            self.state = 64
             self._errHandler.sync(self);
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 56
+                self.state = 58
                 self.clear()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 57
-                self.shape()
+                self.state = 59
+                self.colour()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 58
-                self.increment()
+                self.state = 60
+                self.shape()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 59
-                self.decrement()
+                self.state = 61
+                self.increment()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 60
+                self.state = 62
+                self.decrement()
+                pass
+
+            elif la_ == 6:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 63
                 self.variableAssign()
                 pass
 
@@ -442,12 +462,58 @@ class twoeightyParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 63
+            self.state = 66
             _la = self._input.LA(1)
             if not(_la==twoeightyParser.T__5 or _la==twoeightyParser.T__6):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class ColourContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def COLOUR(self):
+            return self.getToken(twoeightyParser.COLOUR, 0)
+
+        def getRuleIndex(self):
+            return twoeightyParser.RULE_colour
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterColour" ):
+                listener.enterColour(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitColour" ):
+                listener.exitColour(self)
+
+
+
+
+    def colour(self):
+
+        localctx = twoeightyParser.ColourContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_colour)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 68
+            _la = self._input.LA(1)
+            if not(_la==twoeightyParser.T__7 or _la==twoeightyParser.T__8):
+                self._errHandler.recoverInline(self)
+            else:
+                self.consume()
+            self.state = 69
+            self.match(twoeightyParser.COLOUR)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -495,28 +561,28 @@ class twoeightyParser ( Parser ):
     def shape(self):
 
         localctx = twoeightyParser.ShapeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_shape)
+        self.enterRule(localctx, 12, self.RULE_shape)
         try:
-            self.state = 69
+            self.state = 75
             token = self._input.LA(1)
-            if token in [twoeightyParser.T__7, twoeightyParser.T__8]:
+            if token in [twoeightyParser.T__9, twoeightyParser.T__10]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 65
+                self.state = 71
                 self.rectangle()
 
-            elif token in [twoeightyParser.T__10, twoeightyParser.T__11]:
+            elif token in [twoeightyParser.T__12, twoeightyParser.T__13]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 66
+                self.state = 72
                 self.circle()
 
-            elif token in [twoeightyParser.T__12, twoeightyParser.T__13]:
+            elif token in [twoeightyParser.T__14, twoeightyParser.T__15]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 67
+                self.state = 73
                 self.line()
 
-            elif token in [twoeightyParser.T__14, twoeightyParser.T__15]:
+            elif token in [twoeightyParser.T__16, twoeightyParser.T__17]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 68
+                self.state = 74
                 self.arc()
 
             else:
@@ -564,29 +630,29 @@ class twoeightyParser ( Parser ):
     def rectangle(self):
 
         localctx = twoeightyParser.RectangleContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_rectangle)
+        self.enterRule(localctx, 14, self.RULE_rectangle)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 71
+            self.state = 77
             _la = self._input.LA(1)
-            if not(_la==twoeightyParser.T__7 or _la==twoeightyParser.T__8):
+            if not(_la==twoeightyParser.T__9 or _la==twoeightyParser.T__10):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
-            self.state = 72
-            localctx.x = self.value(0)
-            self.state = 73
-            self.match(twoeightyParser.T__9)
-            self.state = 74
-            localctx.y = self.value(0)
-            self.state = 75
-            self.match(twoeightyParser.T__9)
-            self.state = 76
-            localctx.w = self.value(0)
-            self.state = 77
-            self.match(twoeightyParser.T__9)
             self.state = 78
+            localctx.x = self.value(0)
+            self.state = 79
+            self.match(twoeightyParser.T__11)
+            self.state = 80
+            localctx.y = self.value(0)
+            self.state = 81
+            self.match(twoeightyParser.T__11)
+            self.state = 82
+            localctx.w = self.value(0)
+            self.state = 83
+            self.match(twoeightyParser.T__11)
+            self.state = 84
             localctx.h = self.value(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -629,25 +695,25 @@ class twoeightyParser ( Parser ):
     def circle(self):
 
         localctx = twoeightyParser.CircleContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_circle)
+        self.enterRule(localctx, 16, self.RULE_circle)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 80
+            self.state = 86
             _la = self._input.LA(1)
-            if not(_la==twoeightyParser.T__10 or _la==twoeightyParser.T__11):
+            if not(_la==twoeightyParser.T__12 or _la==twoeightyParser.T__13):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
-            self.state = 81
+            self.state = 87
             localctx.x = self.value(0)
-            self.state = 82
-            self.match(twoeightyParser.T__9)
-            self.state = 83
+            self.state = 88
+            self.match(twoeightyParser.T__11)
+            self.state = 89
             localctx.y = self.value(0)
-            self.state = 84
-            self.match(twoeightyParser.T__9)
-            self.state = 85
+            self.state = 90
+            self.match(twoeightyParser.T__11)
+            self.state = 91
             localctx.r = self.value(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -691,29 +757,29 @@ class twoeightyParser ( Parser ):
     def line(self):
 
         localctx = twoeightyParser.LineContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_line)
+        self.enterRule(localctx, 18, self.RULE_line)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 87
+            self.state = 93
             _la = self._input.LA(1)
-            if not(_la==twoeightyParser.T__12 or _la==twoeightyParser.T__13):
+            if not(_la==twoeightyParser.T__14 or _la==twoeightyParser.T__15):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
-            self.state = 88
-            localctx.x1 = self.value(0)
-            self.state = 89
-            self.match(twoeightyParser.T__9)
-            self.state = 90
-            localctx.y1 = self.value(0)
-            self.state = 91
-            self.match(twoeightyParser.T__9)
-            self.state = 92
-            localctx.x2 = self.value(0)
-            self.state = 93
-            self.match(twoeightyParser.T__9)
             self.state = 94
+            localctx.x1 = self.value(0)
+            self.state = 95
+            self.match(twoeightyParser.T__11)
+            self.state = 96
+            localctx.y1 = self.value(0)
+            self.state = 97
+            self.match(twoeightyParser.T__11)
+            self.state = 98
+            localctx.x2 = self.value(0)
+            self.state = 99
+            self.match(twoeightyParser.T__11)
+            self.state = 100
             localctx.y2 = self.value(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -759,37 +825,37 @@ class twoeightyParser ( Parser ):
     def arc(self):
 
         localctx = twoeightyParser.ArcContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_arc)
+        self.enterRule(localctx, 20, self.RULE_arc)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 96
+            self.state = 102
             _la = self._input.LA(1)
-            if not(_la==twoeightyParser.T__14 or _la==twoeightyParser.T__15):
+            if not(_la==twoeightyParser.T__16 or _la==twoeightyParser.T__17):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
-            self.state = 97
-            localctx.x1 = self.value(0)
-            self.state = 98
-            self.match(twoeightyParser.T__9)
-            self.state = 99
-            localctx.y1 = self.value(0)
-            self.state = 100
-            self.match(twoeightyParser.T__9)
-            self.state = 101
-            localctx.x2 = self.value(0)
-            self.state = 102
-            self.match(twoeightyParser.T__9)
             self.state = 103
-            localctx.y2 = self.value(0)
+            localctx.x1 = self.value(0)
             self.state = 104
-            self.match(twoeightyParser.T__9)
+            self.match(twoeightyParser.T__11)
             self.state = 105
-            localctx.cx = self.value(0)
+            localctx.y1 = self.value(0)
             self.state = 106
-            self.match(twoeightyParser.T__9)
+            self.match(twoeightyParser.T__11)
             self.state = 107
+            localctx.x2 = self.value(0)
+            self.state = 108
+            self.match(twoeightyParser.T__11)
+            self.state = 109
+            localctx.y2 = self.value(0)
+            self.state = 110
+            self.match(twoeightyParser.T__11)
+            self.state = 111
+            localctx.cx = self.value(0)
+            self.state = 112
+            self.match(twoeightyParser.T__11)
+            self.state = 113
             localctx.cy = self.value(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -825,13 +891,13 @@ class twoeightyParser ( Parser ):
     def increment(self):
 
         localctx = twoeightyParser.IncrementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_increment)
+        self.enterRule(localctx, 22, self.RULE_increment)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 115
             self.match(twoeightyParser.ID)
-            self.state = 110
-            self.match(twoeightyParser.T__16)
+            self.state = 116
+            self.match(twoeightyParser.T__18)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -866,13 +932,13 @@ class twoeightyParser ( Parser ):
     def decrement(self):
 
         localctx = twoeightyParser.DecrementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_decrement)
+        self.enterRule(localctx, 24, self.RULE_decrement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 112
+            self.state = 118
             self.match(twoeightyParser.ID)
-            self.state = 113
-            self.match(twoeightyParser.T__17)
+            self.state = 119
+            self.match(twoeightyParser.T__19)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -911,14 +977,14 @@ class twoeightyParser ( Parser ):
     def variableAssign(self):
 
         localctx = twoeightyParser.VariableAssignContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_variableAssign)
+        self.enterRule(localctx, 26, self.RULE_variableAssign)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 115
+            self.state = 121
             self.match(twoeightyParser.ID)
-            self.state = 116
+            self.state = 122
             self.match(twoeightyParser.T__1)
-            self.state = 117
+            self.state = 123
             self.value(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -1053,65 +1119,65 @@ class twoeightyParser ( Parser ):
         _parentState = self.state
         localctx = twoeightyParser.ValueContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 26
-        self.enterRecursionRule(localctx, 26, self.RULE_value, _p)
+        _startState = 28
+        self.enterRecursionRule(localctx, 28, self.RULE_value, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 135
+            self.state = 141
             token = self._input.LA(1)
-            if token in [twoeightyParser.T__26, twoeightyParser.T__27, twoeightyParser.T__28, twoeightyParser.T__29, twoeightyParser.T__30]:
+            if token in [twoeightyParser.T__28, twoeightyParser.T__29, twoeightyParser.T__30, twoeightyParser.T__31, twoeightyParser.T__32]:
                 localctx = twoeightyParser.MathFuncContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 120
+                self.state = 126
                 self.funccall()
-                self.state = 121
-                self.match(twoeightyParser.T__18)
-                self.state = 122
-                self.value(0)
                 self.state = 127
+                self.match(twoeightyParser.T__20)
+                self.state = 128
+                self.value(0)
+                self.state = 133
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==twoeightyParser.T__9:
-                    self.state = 123
-                    self.match(twoeightyParser.T__9)
-                    self.state = 124
-                    self.value(0)
+                while _la==twoeightyParser.T__11:
                     self.state = 129
+                    self.match(twoeightyParser.T__11)
+                    self.state = 130
+                    self.value(0)
+                    self.state = 135
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-                self.state = 130
-                self.match(twoeightyParser.T__19)
+                self.state = 136
+                self.match(twoeightyParser.T__21)
 
-            elif token in [twoeightyParser.T__20]:
+            elif token in [twoeightyParser.T__22]:
                 localctx = twoeightyParser.ThousandContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 132
-                self.match(twoeightyParser.T__20)
+                self.state = 138
+                self.match(twoeightyParser.T__22)
 
             elif token in [twoeightyParser.ID]:
                 localctx = twoeightyParser.VariableContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 133
+                self.state = 139
                 self.match(twoeightyParser.ID)
 
             elif token in [twoeightyParser.INT]:
                 localctx = twoeightyParser.IntegerContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 134
+                self.state = 140
                 self.match(twoeightyParser.INT)
 
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 143
+            self.state = 149
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -1122,15 +1188,15 @@ class twoeightyParser ( Parser ):
                     localctx = twoeightyParser.BinopContext(self, twoeightyParser.ValueContext(self, _parentctx, _parentState))
                     localctx.l = _prevctx
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_value)
-                    self.state = 137
+                    self.state = 143
                     if not self.precpred(self._ctx, 5):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                    self.state = 138
+                    self.state = 144
                     self.op()
-                    self.state = 139
+                    self.state = 145
                     localctx.r = self.value(6) 
-                self.state = 145
+                self.state = 151
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
 
@@ -1166,13 +1232,13 @@ class twoeightyParser ( Parser ):
     def op(self):
 
         localctx = twoeightyParser.OpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_op)
+        self.enterRule(localctx, 30, self.RULE_op)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 146
+            self.state = 152
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__20) | (1 << twoeightyParser.T__21) | (1 << twoeightyParser.T__22) | (1 << twoeightyParser.T__23) | (1 << twoeightyParser.T__24) | (1 << twoeightyParser.T__25))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__22) | (1 << twoeightyParser.T__23) | (1 << twoeightyParser.T__24) | (1 << twoeightyParser.T__25) | (1 << twoeightyParser.T__26) | (1 << twoeightyParser.T__27))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
@@ -1208,13 +1274,13 @@ class twoeightyParser ( Parser ):
     def funccall(self):
 
         localctx = twoeightyParser.FunccallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_funccall)
+        self.enterRule(localctx, 32, self.RULE_funccall)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 148
+            self.state = 154
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__26) | (1 << twoeightyParser.T__27) | (1 << twoeightyParser.T__28) | (1 << twoeightyParser.T__29) | (1 << twoeightyParser.T__30))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__28) | (1 << twoeightyParser.T__29) | (1 << twoeightyParser.T__30) | (1 << twoeightyParser.T__31) | (1 << twoeightyParser.T__32))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
@@ -1231,7 +1297,7 @@ class twoeightyParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[13] = self.value_sempred
+        self._predicates[14] = self.value_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
