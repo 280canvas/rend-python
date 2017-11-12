@@ -1,11 +1,13 @@
-# Generated from twoeighty.g4 by ANTLR 4.5.3
+# Generated from /home/reece/Programming/rend-python/twoeighty.g4 by ANTLR 4.7
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
+from typing.io import TextIO
+import sys
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\'")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\'")
         buf.write("\u009f\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\3\2\7\2")
@@ -22,10 +24,10 @@ def serializedATN():
         buf.write("\16\20\u0099\13\20\3\21\3\21\3\22\3\22\3\22\2\3\36\23")
         buf.write("\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"\2\13\3\2\5")
         buf.write("\6\3\2\b\t\3\2\n\13\3\2\f\r\3\2\17\20\3\2\21\22\3\2\23")
-        buf.write("\24\3\2\31\36\3\2\37$\u009c\2\'\3\2\2\2\4\63\3\2\2\2\6")
-        buf.write("8\3\2\2\2\bB\3\2\2\2\nD\3\2\2\2\fF\3\2\2\2\16M\3\2\2\2")
-        buf.write("\20O\3\2\2\2\22X\3\2\2\2\24_\3\2\2\2\26h\3\2\2\2\30u\3")
-        buf.write("\2\2\2\32x\3\2\2\2\34{\3\2\2\2\36\u008f\3\2\2\2 \u009a")
+        buf.write("\24\3\2\31\36\3\2\37$\2\u009c\2\'\3\2\2\2\4\63\3\2\2\2")
+        buf.write("\68\3\2\2\2\bB\3\2\2\2\nD\3\2\2\2\fF\3\2\2\2\16M\3\2\2")
+        buf.write("\2\20O\3\2\2\2\22X\3\2\2\2\24_\3\2\2\2\26h\3\2\2\2\30")
+        buf.write("u\3\2\2\2\32x\3\2\2\2\34{\3\2\2\2\36\u008f\3\2\2\2 \u009a")
         buf.write("\3\2\2\2\"\u009c\3\2\2\2$&\5\4\3\2%$\3\2\2\2&)\3\2\2\2")
         buf.write("\'%\3\2\2\2\'(\3\2\2\2(*\3\2\2\2)\'\3\2\2\2*\60\5\6\4")
         buf.write("\2+,\5\b\5\2,-\7\3\2\2-/\3\2\2\2.+\3\2\2\2/\62\3\2\2\2")
@@ -155,9 +157,9 @@ class twoeightyParser ( Parser ):
     INT=36
     COLOUR=37
 
-    def __init__(self, input:TokenStream):
-        super().__init__(input)
-        self.checkVersion("4.5.3")
+    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+        super().__init__(input, output)
+        self.checkVersion("4.7")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -328,6 +330,7 @@ class twoeightyParser ( Parser ):
             if not(_la==twoeightyParser.T__2 or _la==twoeightyParser.T__3):
                 localctx.unit = self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 56
             self.match(twoeightyParser.T__4)
@@ -389,7 +392,7 @@ class twoeightyParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_statement)
         try:
             self.state = 64
-            self._errHandler.sync(self);
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -469,6 +472,7 @@ class twoeightyParser ( Parser ):
             if not(_la==twoeightyParser.T__5 or _la==twoeightyParser.T__6):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -513,6 +517,7 @@ class twoeightyParser ( Parser ):
             if not(_la==twoeightyParser.T__7 or _la==twoeightyParser.T__8):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 69
             self.match(twoeightyParser.COLOUR)
@@ -566,27 +571,28 @@ class twoeightyParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_shape)
         try:
             self.state = 75
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [twoeightyParser.T__9, twoeightyParser.T__10]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 71
                 self.rectangle()
-
+                pass
             elif token in [twoeightyParser.T__12, twoeightyParser.T__13]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 72
                 self.circle()
-
+                pass
             elif token in [twoeightyParser.T__14, twoeightyParser.T__15]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 73
                 self.line()
-
+                pass
             elif token in [twoeightyParser.T__16, twoeightyParser.T__17]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 74
                 self.arc()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -641,6 +647,7 @@ class twoeightyParser ( Parser ):
             if not(_la==twoeightyParser.T__9 or _la==twoeightyParser.T__10):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 78
             localctx.x = self.value(0)
@@ -706,6 +713,7 @@ class twoeightyParser ( Parser ):
             if not(_la==twoeightyParser.T__12 or _la==twoeightyParser.T__13):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 87
             localctx.x = self.value(0)
@@ -768,6 +776,7 @@ class twoeightyParser ( Parser ):
             if not(_la==twoeightyParser.T__14 or _la==twoeightyParser.T__15):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 94
             localctx.x1 = self.value(0)
@@ -836,6 +845,7 @@ class twoeightyParser ( Parser ):
             if not(_la==twoeightyParser.T__16 or _la==twoeightyParser.T__17):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 103
             localctx.x1 = self.value(0)
@@ -1127,6 +1137,7 @@ class twoeightyParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 141
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [twoeightyParser.T__28, twoeightyParser.T__29, twoeightyParser.T__30, twoeightyParser.T__31, twoeightyParser.T__32, twoeightyParser.T__33]:
                 localctx = twoeightyParser.MathFuncContext(self, localctx)
@@ -1153,28 +1164,28 @@ class twoeightyParser ( Parser ):
 
                 self.state = 136
                 self.match(twoeightyParser.T__21)
-
+                pass
             elif token in [twoeightyParser.T__22]:
                 localctx = twoeightyParser.ThousandContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 138
                 self.match(twoeightyParser.T__22)
-
+                pass
             elif token in [twoeightyParser.ID]:
                 localctx = twoeightyParser.VariableContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 139
                 self.match(twoeightyParser.ID)
-
+                pass
             elif token in [twoeightyParser.INT]:
                 localctx = twoeightyParser.IntegerContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 140
                 self.match(twoeightyParser.INT)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -1243,6 +1254,7 @@ class twoeightyParser ( Parser ):
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__22) | (1 << twoeightyParser.T__23) | (1 << twoeightyParser.T__24) | (1 << twoeightyParser.T__25) | (1 << twoeightyParser.T__26) | (1 << twoeightyParser.T__27))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -1285,6 +1297,7 @@ class twoeightyParser ( Parser ):
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << twoeightyParser.T__28) | (1 << twoeightyParser.T__29) | (1 << twoeightyParser.T__30) | (1 << twoeightyParser.T__31) | (1 << twoeightyParser.T__32) | (1 << twoeightyParser.T__33))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re

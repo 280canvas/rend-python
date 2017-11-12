@@ -42,6 +42,7 @@ funccall        : 'sin'
                 | 'tan'
                 | 'pow'
                 | 'rand'
+                | 'abs'
                 ;
 
 
