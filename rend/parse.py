@@ -3,9 +3,9 @@ import io
 
 from antlr4 import *
 
-from rend.ANTLR.twoeightyLexer import twoeightyLexer
-from rend.ANTLR.twoeightyListener import twoeightyListener
-from rend.ANTLR.twoeightyParser import twoeightyParser
+from ANTLR.twoeightyLexer import twoeightyLexer
+from ANTLR.twoeightyListener import twoeightyListener
+from ANTLR.twoeightyParser import twoeightyParser
 
 
 class astBuilder(twoeightyListener):
@@ -292,4 +292,4 @@ def parse(tweet):
     return encoder.encode(builder.root)
 
 
-print(parse("x=0;50 ms:#blue;l 500*sin(x),50,rand(0,%),800;#red;l %,500,500,rand(0,%);x++;"))
+print(parse("x=0;50 ms:#blue;l abs(500*sin(x)),50,rand(0,%),800;#red;l %,500,500,rand(0,%);x++;"))
